@@ -201,7 +201,6 @@ class CustomCamera: UIViewController, UIImagePickerControllerDelegate, UINavigat
     @objc private func didTapTakePhoto() {
         guard let device = currentInput?.device else { return }
 
-        // Kiểm tra camera có flash hay không
         let hasFlash = device.hasFlash && device.isFlashAvailable
 
         let settings = AVCapturePhotoSettings()
@@ -218,9 +217,8 @@ class CustomCamera: UIViewController, UIImagePickerControllerDelegate, UINavigat
         } else {
             settings.flashMode = .off
         }
-        
-        output.capturePhoto(with: AVCapturePhotoSettings(),
-                            delegate: self)
+
+        output.capturePhoto(with: settings, delegate: self)
     }
 
     @objc private func switchCameraTapped() {
@@ -275,7 +273,7 @@ class CustomCamera: UIViewController, UIImagePickerControllerDelegate, UINavigat
         case .auto:
             currentFlashMode = .on
             flashOptional.setImage(UIImage(named: "ic_flashOn"), for: .normal)
-            setFlashMode(.on)
+            setFlashMode(.off)
         case .on:
             currentFlashMode = .off
             flashOptional.setImage(UIImage(named: "ic_flashOff"), for: .normal)
