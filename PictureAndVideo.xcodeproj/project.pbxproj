@@ -20,6 +20,8 @@
 		2C8ED85F2E3B64A8009D20E4 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8ED85C2E3B64A8009D20E4 /* Camera.swift */; };
 		2C8ED8622E3B64BB009D20E4 /* ImportPhoto.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C8ED8612E3B64BB009D20E4 /* ImportPhoto.xib */; };
 		2C8ED8632E3B64BB009D20E4 /* ImportPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8ED8602E3B64BB009D20E4 /* ImportPhoto.swift */; };
+		2CD3B7D12E4045F500A358DA /* CustomCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD3B7D02E4045EE00A358DA /* CustomCamera.swift */; };
+		2CD3B7D42E40648200A358DA /* FlashMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD3B7D32E40648200A358DA /* FlashMode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		2C8ED85D2E3B64A8009D20E4 /* Camera.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Camera.xib; sourceTree = "<group>"; };
 		2C8ED8602E3B64BB009D20E4 /* ImportPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportPhoto.swift; sourceTree = "<group>"; };
 		2C8ED8612E3B64BB009D20E4 /* ImportPhoto.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImportPhoto.xib; sourceTree = "<group>"; };
+		2CD3B7D02E4045EE00A358DA /* CustomCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCamera.swift; sourceTree = "<group>"; };
+		2CD3B7D32E40648200A358DA /* FlashMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashMode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,13 +64,6 @@
 			path = HomeVC;
 			sourceTree = "<group>";
 		};
-		2C6AF3A22E3CA82700C6FA2D /* 1 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = 1;
-			sourceTree = "<group>";
-		};
 		2C8ED8112E3B4B37009D20E4 = {
 			isa = PBXGroup;
 			children = (
@@ -86,7 +83,6 @@
 		2C8ED83B2E3B4B40009D20E4 /* PictureAndVideo */ = {
 			isa = PBXGroup;
 			children = (
-				2C6AF3A22E3CA82700C6FA2D /* 1 */,
 				2C6AF37F2E3C5B0F00C6FA2D /* HomeVC */,
 				2C8ED85A2E3B6428009D20E4 /* Camera */,
 				2C8ED85B2E3B644C009D20E4 /* ExportPhoto */,
@@ -105,8 +101,10 @@
 		2C8ED85A2E3B6428009D20E4 /* Camera */ = {
 			isa = PBXGroup;
 			children = (
+				2CD3B7D02E4045EE00A358DA /* CustomCamera.swift */,
 				2C8ED85C2E3B64A8009D20E4 /* Camera.swift */,
 				2C8ED85D2E3B64A8009D20E4 /* Camera.xib */,
+				2CD3B7D32E40648200A358DA /* FlashMode.swift */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
@@ -198,6 +196,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C8ED85F2E3B64A8009D20E4 /* Camera.swift in Sources */,
+				2CD3B7D42E40648200A358DA /* FlashMode.swift in Sources */,
+				2CD3B7D12E4045F500A358DA /* CustomCamera.swift in Sources */,
 				2C8ED83C2E3B4B40009D20E4 /* AppDelegate.swift in Sources */,
 				2C8ED8632E3B64BB009D20E4 /* ImportPhoto.swift in Sources */,
 				2C8ED83D2E3B4B40009D20E4 /* SceneDelegate.swift in Sources */,

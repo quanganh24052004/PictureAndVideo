@@ -49,17 +49,30 @@ class Camera: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         }
     }
     func openCamera() {
-        guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
-            print("Camera không khả dụng")
-            return
+//        guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
+//            print("Camera không khả dụng")
+//            return
+//        }
+//
+//        let picker = UIImagePickerController()
+//        picker.sourceType = .camera
+//        picker.delegate = self
+//        picker.allowsEditing = false
+//        self.picker = picker
+//        present(picker, animated: true)
+        let cameraVC = CustomCamera()
+        cameraVC.modalPresentationStyle = .fullScreen
+        cameraVC.onImageCaptured = { [weak self] image in
+            guard let self else { return }
+            if selectedImageIndex < imageView.count {
+                self.imageView[selectedImageIndex].image = image
+                if selectedImageIndex == currentIndex {
+                    currentIndex += 1
+                }
+                self.updateButtonTitle()
+            }
         }
-
-        let picker = UIImagePickerController()
-        picker.sourceType = .camera
-        picker.delegate = self
-        picker.allowsEditing = false
-        self.picker = picker
-        present(picker, animated: true)
+        present(cameraVC, animated: true)
     }
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
